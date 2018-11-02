@@ -1,0 +1,28 @@
+
+// body
+@mixin body-theme($theme, $font) {
+  body {
+    background-color: map-get($theme, lighter);
+    font-size: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  }
+}
+
+// regular button
+@mixin a-raised__button-theme($theme, $font) {
+
+  .a-raised__button {
+    color: map-get($theme, lighter);
+    font-weight: 800;
+    background-color: map-get($theme, darker);
+    border: 2px solid map-get($theme, light);
+  }
+}
+
+// popup button
+
+// input
+
+// dropdown

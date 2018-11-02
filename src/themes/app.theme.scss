@@ -1,0 +1,16 @@
+@import './app.skin';
+@import './app.palettes';
+@import './app.typography';
+@import '../app/app.component';
+
+$dark-theme: $gvs-dark-blue;
+
+@mixin gvs-theme($theme, $font) {
+   @include body_theme($theme, $font);
+   @include a-raised__button-theme($theme, $font);
+   @include app-component-theme($theme, $font);
+
+}
+
+
+@include gvs-theme($dark-theme, $font);

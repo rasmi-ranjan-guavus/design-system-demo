@@ -1,0 +1,158 @@
+
+.o-app-container {
+  display: grid;
+  grid-template-columns: 200px auto 200px;
+  grid-template-rows: 70px 40px auto 40px;
+  grid-gap: 10px 10px;
+  padding: 10px;
+  height: calc(100vh);
+  width: calc(100vw);
+  min-width: 600px;
+  min-height: 400px;
+}
+
+.m-app-container__div {
+  text-align: center;
+}
+
+.m-content1 {
+  grid-column: 1 / 4;
+  grid-row: 1
+}
+
+.m-content2 {
+  grid-column: 1 / 4;
+  grid-row: 2;
+  background-color: #2196F3; //will go to skin class
+  display: flex;
+  align-items: center;
+}
+
+.m-content3 {
+  grid-column: 1 / 2;
+  grid-row: 3;
+  background-color: rgba(81, 101, 110, 0.8);  //will go to skin class
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.m-content4 {
+  grid-column: 2 / 3;
+  grid-row: 3;
+  background-color: rgba(141, 154, 160, 0.8); //will go to skin class
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.m-content5 {
+  grid-column: 3 / 4;
+  grid-row: 3;
+  background-color: rgba(124, 141, 140, 0.8); //will go to skin class
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.m-content6 {
+  grid-column: 1 / 4;
+  grid-row: 4;
+  background-color: #2196F3;  //will go to skin class
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sub-grid-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr 100px;
+  grid-template-areas: "comp1 comp2" "comp3 comp3";
+  grid-gap: 3px 0;
+}
+
+.component1 {
+  grid-area: comp1;
+  background-color: rgba(179, 201, 197, 0.678); //will go to skin class
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 200px;
+}
+
+.component2 {
+  grid-area: comp2;
+  background-color: rgba(149, 193, 206, 0.678); //will go to skin class
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 200px;
+}
+
+.component3 {
+  grid-area: comp3;
+  background-color: rgba(133, 164, 167, 0.678); //will go to skin class
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.m-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;  //will go to skin class
+  padding: 10px 20px;
+  background-color: #488EAD;  //will go to skin class
+  height: 70px;
+}
+
+.m-header-left {
+  font: normal 28px 'Fugaz One', cursive;  //will go to skin class
+}
+
+.m-header-center ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.m-header-center ul {
+  list-style: none;
+}
+
+.header-right {
+  list-style: none;
+}
+
+ul.breadcrumb {
+  padding: 10px 20px;
+  list-style: none;
+}
+
+ul.breadcrumb li {
+  display: inline;
+  font-size: 18px;  //will go to skin class
+}
+
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;  //will go to skin class
+  content: "/\00a0";
+}
+
+ul.breadcrumb li a {
+  color: #0275d8;  //will go to skin class
+  text-decoration: none;
+}
+
+ul.breadcrumb li a:hover {
+  color: #01447e;  //will go to skin class
+  text-decoration: underline;
+}
