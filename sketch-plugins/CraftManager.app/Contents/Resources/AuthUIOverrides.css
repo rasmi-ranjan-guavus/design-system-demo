@@ -1,0 +1,118 @@
+[class^="Type_title-smaller"]{
+    font-family: "SF Display", -apple-system, BlinkMacSystemFont, "Open Sans", open-sans, sans-serif !important;
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+    color: #363940;
+}
+
+[class^="Type_body-larger"]{
+    font-family: "SF Text", -apple-system, BlinkMacSystemFont, "Open Sans", open-sans, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    text-align: center;
+    color: #5B5F69;
+}
+
+[class^="label_label"] {
+    font-family: "SF Text", -apple-system, BlinkMacSystemFont, "Open Sans", open-sans, sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #363940;
+}
+
+[class^="Type_body-smallest"] {
+    font-family: "SF Text", -apple-system, BlinkMacSystemFont, "Open Sans", open-sans, sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+    min-padding: 10px;
+}
+
+button {
+    font-family: "SF Text",-apple-system,BlinkMacSystemFont,"Open Sans",open-sans,sans-serif;
+}
+
+[class^="subtitle-smallest_subtitle-smallest"] {
+    font-family: "SF Text", -apple-system, BlinkMacSystemFont, "Open Sans", open-sans, sans-serif;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+[class^="Type_subtitle"] {
+    font-family: "SF Text", -apple-system, BlinkMacSystemFont, "Open Sans", open-sans, sans-serif;
+    font-size: 13px;
+}
+
+[class^="Type_subtitle-smallest"] {
+    font-family: "SF Text", -apple-system, BlinkMacSystemFont, "Open Sans", open-sans, sans-serif;
+}
+
+[class^="label-prose_label-prose"] {
+    font-family: "SF Text", -apple-system, BlinkMacSystemFont, "Open Sans", open-sans, sans-serif;
+    font-size: 11px;
+    line-height: 20px;
+}
+
+[class^="Type_body-smaller"] {
+    display: none;
+}
+
+.itxImi {
+    margin-bottom: 32px;
+    position: relative;
+}
+
+[data-webview-selector-button-hide-on-mobile] {
+    visibility: hidden;
+}
+
+[data-webview-selector-image-hide-on-mobile] {
+    visibility: hidden;
+}
+
+div[class^="CenteredTableCell"] {
+    padding:50px 0;
+}
+
+div[class^="CenteredTableCell"] > div {
+    padding:0px;
+    min-height: revert;
+}
+
+a[class^=invision-logo], button[to$="sign-up"], [href^="/d/signup"] {
+    visibility: hidden;
+}
+
+div[class^=main-panel__table-cell] {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+a[class^=main-panel__switch__button] {
+    visibility: hidden;
+}
+
+body {
+    -webkit-user-select: none;
+}
+
+.main-panel__footer {
+    display: none;
+}
+
+.co-branding-logo {
+    max-width: 128px;
+    margin: 0px 0px 36px 0px;
+ }
+
+.applogin-banner {
+    padding: 5px 0px;
+}
+
+.okta-container .applogin-banner .applogin-container h1 {
+    font-size: 14px;
+}
