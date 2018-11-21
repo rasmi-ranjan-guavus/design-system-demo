@@ -1,0 +1,20 @@
+
+$box-shadow-color: rgba(0, 0, 0, 0.1);
+
+$elevation-data: (
+  flat: none,
+  raised: 0 1px 2px 0 $box-shadow-color,
+  overlay: 0 4px 8px 0 $box-shadow-color,
+  pop-out: 0 6px 12px 0 $box-shadow-color,
+  temporary-nav: 0 8px 16px 0 $box-shadow-color,
+  sticky-nav: 0 12px 24px 0 $box-shadow-color
+);
+
+@mixin  elevation($value) {
+
+  @if map-has-key($elevation-data, $value) {
+    box-shadow: #{map-get($elevation-data, value)};
+  } @else {
+    @warn '#{$value} is not a valid elevation name.';
+  }
+}

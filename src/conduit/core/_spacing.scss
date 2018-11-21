@@ -1,0 +1,25 @@
+$space-unit: 4px;
+
+$spacing-data: (
+  none: 0,
+  xs: rem($space-unit),
+  sm: rem($space-unit * 2),
+  md: rem($space-unit * 4),
+  lg: rem($space-unit * 6),
+  xl: rem($space-unit * 8),
+);
+
+@function spacing($element, $value: md) {
+
+
+  //
+  $fetched-value: map-get($spacing-data, $value);
+  $length: font-size($element);
+  $length: rem($default-font-size);
+
+  @if type-of($fetched-value) == number && type-of($length) != null {
+    @return ($length / 1rem) * $fetched-value;
+  } @else {
+    @error 'Spacing variant `#{$value}` not found.';
+  }
+}

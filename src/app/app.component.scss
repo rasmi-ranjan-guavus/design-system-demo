@@ -1,5 +1,5 @@
 @import './template/template.skin';
 
-@mixin  app-component-theme($theme, $font) {
-  @include m-app-container__div-theme($theme, $font);
+@mixin  app-component-theme($theme) {
+  @include m-app-container__div-theme($theme);
 }

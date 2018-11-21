@@ -9,8 +9,8 @@
 .a-raised__button {
   cursor: pointer;
   text-transform: uppercase;
-  padding: 12px 30px;
-  border-radius: 4px;
+  padding: spacing(12px) spacing(12px) * 2;
+  border-radius: spacing(12px, xs)
 }
 
 // popup button

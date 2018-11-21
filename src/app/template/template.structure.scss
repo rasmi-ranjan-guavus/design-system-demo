@@ -115,8 +115,25 @@
 }
 
 .m-header-left {
-  font: normal 28px 'Fugaz One', cursive;  //will go to skin class
+  font: normal 32px 'Fugaz One', cursive;  //will go to skin class
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: space-between;
 }
+
+.a-header-left__logo {
+    height: 48px;
+    width: 48px;
+    margin-right: 10px;
+    fill: burlywood;
+    stroke: green;
+}
+
+// svg {
+//   fill: blue;
+// }
+
 
 .m-header-center ul li {
   display: inline-block;

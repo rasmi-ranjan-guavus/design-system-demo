@@ -1,0 +1,52 @@
+$default-font-size: 16px;
+
+@function rem($value) {
+  $remValue: ($value / $default-font-size) * 1rem;
+
+  @return $remValue;
+}
+
+
+@function get-accent-color($color) {
+  @if (lightness($color) > 50) {
+    @return #000000;
+  } @else {
+    @return #ffffff;
+  }
+}
+
+@function get-color($palette, $value: default, $for-background: null) {
+  $fetched-color: map-get($palette, $value);
+ @warn invert(#FFFF00);
+  @if $for-background != null {
+    $fetched-color: color-multiply($fetched-color, $for-background);
+  }
+
+  @if type-of($fetched-color) == color {
+    @return $fetched-color;
+  } @else {
+    $error: 'Color for `#{$value}` not found. Make sure arguments are strings.';
+      @error $error;
+  }
+}
+
+@function color-multiply($foreground, $background: null) {
+  @if $background == null {
+    // stylelint-disable-next-line color-no-hex
+    $background: #ffffff;
+  }
+
+  @return $foreground * $background / 255;
+}
+
+@function create-palette($color) {
+  $palette: (
+     lighter: lighten($color, 30%),
+     light: lighten($color, 15%),
+     default: $color,
+     dark: darken($color, 15%),
+     darker: darken($color, 30%),
+  );
+
+  @return  $palette;
+}

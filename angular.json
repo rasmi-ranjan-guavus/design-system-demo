@@ -23,7 +23,6 @@
               "src/assets"
             ],
             "styles": [
-              "src/themes/app.structure.scss",
               "src/themes/app.theme.scss",
               "src/themes/app.normalize.scss"
             ],

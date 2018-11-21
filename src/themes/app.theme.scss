@@ -1,16 +1,23 @@
 @import './app.skin';
-@import './app.palettes';
-@import './app.typography';
 @import '../app/app.component';
+@import './app.normalize';
 
-$dark-theme: $gvs-dark-blue;
 
-@mixin gvs-theme($theme, $font) {
-   @include body_theme($theme, $font);
-   @include a-raised__button-theme($theme, $font);
-   @include app-component-theme($theme, $font);
+@import '../conduit/styles.scss';
+
+@import './app.structure';
+
+
+$dark-theme: create-theme($gvs-blue, $gvs-green);
+
+@mixin gvs-theme($theme) {
+
+  $colors: map-get($theme, brand-primary-color);
+
+   @include body_theme($theme);
+   @include a-raised__button-theme($colors);
+   @include app-component-theme($theme);
 
 }
 
-
-@include gvs-theme($dark-theme, $font);
+@include gvs-theme($dark-theme);
