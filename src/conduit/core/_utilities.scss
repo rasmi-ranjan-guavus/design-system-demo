@@ -6,18 +6,30 @@ $default-font-size: 16px;
   @return $remValue;
 }
 
+@function get-accent-color($color, $type: 'primary') {
 
-@function get-accent-color($color) {
   @if (lightness($color) > 50) {
-    @return #000000;
-  } @else {
-    @return #ffffff;
+      @if $type == 'primary' {
+        @return rgba(#1F2D3D, 1);
+      } @else if $type == 'secondary' {
+        @return rgba(#000000, 0.6);
+      } @else if $type == 'disabled' {
+        @return rgba(#000000, 0.38);
+      }
+    } @else {
+    @if $type == 'primary' {
+      @return rgba(#FFFFFF, 1);
+    } @else if $type == 'secondary' {
+      @return rgba(#FFFFFF, 0.6);
+    } @else if $type == 'disabled' {
+      @return rgba(#FFFFFF, 0.38);
+    }
   }
 }
 
 @function get-color($palette, $value: default, $for-background: null) {
   $fetched-color: map-get($palette, $value);
- @warn invert(#FFFF00);
+
   @if $for-background != null {
     $fetched-color: color-multiply($fetched-color, $for-background);
   }
@@ -41,12 +53,22 @@ $default-font-size: 16px;
 
 @function create-palette($color) {
   $palette: (
-     lighter: lighten($color, 30%),
-     light: lighten($color, 15%),
+     lighter: desaturate(lighten($color, 20), 10),
+     light: desaturate(lighten($color, 10), 5),
      default: $color,
-     dark: darken($color, 15%),
-     darker: darken($color, 30%),
+     dark: saturate(darken($color, 10), 5),
+     darker: saturate(darken($color, 20), 10),
   );
 
   @return  $palette;
+}
+
+@function hexToRGB($value) {
+    $red: red($value);
+    $green: green($value);
+    $blue: blue($value);
+
+    @warn $red;
+
+    @return rgb($red, $green, $blue);
 }

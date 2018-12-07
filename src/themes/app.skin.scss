@@ -4,9 +4,7 @@
   body {
     background-color: map-get($theme, lighter);
     font-size: 16px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+    font-family: font-family();
   }
 }
 
@@ -15,10 +13,18 @@
 
   .a-raised__button {
     color: get-accent-color(get-color($theme, lighter));
-    font-weight: 800;
+    font-weight: font-weight('regular');
     font-size: font-size('button');
     background-color: get-color($theme, lighter);
-    border: 2px solid get-color($theme, dark);
+   //  border: 2px solid get-color($theme, dark);
+
+
+    &:hover {
+       // background-color: hexToRGB(#ffcdd2);
+       background-color: get-state-color(get-color($theme, lighter), 'hover');
+
+       @include elevation('raised');
+    }
   }
 }
 

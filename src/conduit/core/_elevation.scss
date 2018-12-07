@@ -1,19 +1,22 @@
 
-$box-shadow-color: rgba(0, 0, 0, 0.1);
+$box-shadow-color1: rgba(0, 0, 0, 0.14);
+$box-shadow-color2: rgba(0, 0, 0, 0.12);
+$box-shadow-color3: rgba(0, 0, 0, 0.2);
+
 
 $elevation-data: (
   flat: none,
-  raised: 0 1px 2px 0 $box-shadow-color,
-  overlay: 0 4px 8px 0 $box-shadow-color,
-  pop-out: 0 6px 12px 0 $box-shadow-color,
-  temporary-nav: 0 8px 16px 0 $box-shadow-color,
-  sticky-nav: 0 12px 24px 0 $box-shadow-color
+  rested: '0 1px 1px 0 #{$box-shadow-color1}, 0 2px 1px -1px #{$box-shadow-color2}, 0 1px 2px 0 #{$box-shadow-color3}',
+  overlay: '0 2px 2px 0 #{$box-shadow-color1}, 0 3px 1px -2px #{$box-shadow-color2}, 0 1px 5px 0 #{$box-shadow-color3}',
+  raised: '0 4px 5px 0 #{$box-shadow-color1}, 0 1px 10px 0 #{$box-shadow-color2}, 0 2px 4px -1px #{$box-shadow-color3}',
+  menu-list: '0 8px 10px 1px #{$box-shadow-color1}, 0 3px 14px 2px #{$box-shadow-color2}, 0 5px 5px -3px #{$box-shadow-color3}',
+  modal: '0 16px 24px 2px #{$box-shadow-color1}, 0 6px 30px 5px #{$box-shadow-color2}, 0 8px 10px -5px #{$box-shadow-color3}'
 );
 
-@mixin  elevation($value) {
+@mixin elevation($value) {
 
   @if map-has-key($elevation-data, $value) {
-    box-shadow: #{map-get($elevation-data, value)};
+    box-shadow: #{map-get($elevation-data, $value)};
   } @else {
     @warn '#{$value} is not a valid elevation name.';
   }

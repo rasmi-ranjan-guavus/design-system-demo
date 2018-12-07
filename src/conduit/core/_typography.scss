@@ -1,11 +1,15 @@
 
 $font-family-roboto: 'Roboto';
 
+$font-family-SF: 'SFCompactDisplay';
+
+$font-family-apple: '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif';
+
 $font-weight-data: (
-     small: 300,
-     normal: 400,
-     bold: 700,
-     extra-bold: 900
+     light: 300,
+     regular: 400,
+     medium: 500,
+     bold: 700
 );
 
 $font-size-data: (
@@ -54,7 +58,7 @@ $font-size-data: (
 }
 
 @function font-family() {
-   @return $font-family-roboto;
+   @return $font-family-SF;
 }
 
 

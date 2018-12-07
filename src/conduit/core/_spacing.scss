@@ -11,7 +11,6 @@ $spacing-data: (
 
 @function spacing($element, $value: md) {
 
-
   //
   $fetched-value: map-get($spacing-data, $value);
   $length: font-size($element);

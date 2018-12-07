@@ -7,15 +7,28 @@
 
 @import './app.structure';
 
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url(material-design-icons/iconfont/MaterialIcons-Regular.woff2) format('woff2'),
+    url(material-design-icons/iconfont/MaterialIcons-Regular.woff) format('woff'),
+    url(material-design-icons/iconfont/MaterialIcons-Regular.ttf) format('truetype');
+}
 
-$dark-theme: create-theme($gvs-blue, $gvs-green);
+
+$dark-theme: create-theme($gvs-dark-gray, $gvs-green);
 
 @mixin gvs-theme($theme) {
 
-  $colors: map-get($theme, brand-primary-color);
+  $primary-color: map-get($theme, brand-primary-color);
+  $secondary-color: map-get($theme, brand-secondary-color);
+
 
    @include body_theme($theme);
-   @include a-raised__button-theme($colors);
+   @include a-raised__button-theme($primary-color);
    @include app-component-theme($theme);
 
 }

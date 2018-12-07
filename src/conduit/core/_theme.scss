@@ -1,11 +1,14 @@
 
 
 
-@function create-theme($colors, $colors2, $font: null) {
+@function create-theme($colors, $colors2, $font: null, $isLight: true) {
   $theme: (
     brand-primary-color: $colors,
     brand-secondary-color: $colors2,
-    font: $font
+    brand-tertiary-color: $colors2,
+    status-color: $colors2,
+    font: $font,
+    icons: $font
   );
 
   @return $theme;

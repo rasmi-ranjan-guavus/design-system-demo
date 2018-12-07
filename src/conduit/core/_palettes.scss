@@ -1,10 +1,20 @@
-$gvs-dark-blue: (
+$dark-primary-text: rgba(#1F2D3D, 1);
+$dark-secondary-text: rgba(black, 0.6);
+$dark-disabled-text: rgba(black, 0.38);
+
+$light-primary-text: rgba(white, 1);
+$light-secondary-text: rgba(white, 0.6);
+$light-disabled-text: rgba(white, 0.38);
+
+
+$gvs-dark-gray: (
   lighter: #D6D6E8,
   light: #B2B2C3,
   default: #9292A2,
   dark: #6A6A79,
   darker: #565665
 );
+
 
 $gvs-red: create-palette(red);
 
@@ -13,10 +23,17 @@ $gvs-green: create-palette(#00FF00);
 $gvs-blue: create-palette(#0000FF);
 
 $gvs-states: (
-      'hover': rgba(223, 227, 232, 0.3),
-      'focused': rgba(223, 227, 232, 0.3),
-      'active': rgba(179, 188, 245, 0.1),
-      'selected': rgba(179, 188, 245, 0.15),
-      'subdued': rgba(249, 250, 251, 1),
-      'disabled': rgba(249, 250, 251, 1)
-    ),
+      'hover': 20,   // darken ()
+      'focused': rgba(223, 227, 232, 0.3),   // darken ()
+      'actived': rgba(179, 188, 245, 0.1),  // darken ()
+      'selected': rgba(179, 188, 245, 0.15),  // darken ()
+      'disabled': rgba(249, 250, 251, 1),  // darken ()
+      'pressed': rgba(249, 250, 251, 1)  // darken ()
+    );
+
+@function get-state-color($color, $value: 'hover') {
+   $opacity: map-get($gvs-states, $value);
+
+    @return darken($color, $opacity);
+
+}
